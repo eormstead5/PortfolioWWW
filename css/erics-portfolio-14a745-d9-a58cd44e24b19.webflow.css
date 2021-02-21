@@ -20,6 +20,14 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
 p {
   margin-bottom: 10px;
   font-size: 18px;
@@ -46,6 +54,10 @@ blockquote {
   line-height: 22px;
   font-style: italic;
   font-weight: 300;
+}
+
+figure {
+  margin-bottom: 10px;
 }
 
 .hero-section {
@@ -155,8 +167,10 @@ blockquote {
 }
 
 .portfolio-section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  min-height: 100vh;
+  min-width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .portfolio-section.top-section {
@@ -722,16 +736,40 @@ blockquote {
   flex-direction: row;
 }
 
-.row.portfoliobackshadow1:hover {
-  box-shadow: 6px 6px 20px 3px #03024c;
+.row.portfoliobackshadow1 {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  min-height: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.5fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
 }
 
 .row.portfoliobackshadow2:hover {
   box-shadow: 9px 9px 8px 3px #054d55;
 }
 
-.row.portfoliobackshadow3:hover {
-  box-shadow: 6px 6px 13px 3px #550505;
+.row.collection {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1.25fr 2fr;
+  grid-template-columns: 1.25fr 2fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
 }
 
 .portfolioleftsidecolumns {
@@ -743,6 +781,7 @@ blockquote {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -764,19 +803,20 @@ blockquote {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   -webkit-box-ordinal-group: 1;
   -webkit-order: 0;
   -ms-flex-order: 0;
@@ -789,19 +829,20 @@ blockquote {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 30px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   background-color: #2988a0;
   box-shadow: 1px 1px 3px 0 #0c5852;
 }
@@ -834,8 +875,8 @@ blockquote {
 }
 
 .portfolio-text-block {
-  margin-top: 14%;
-  margin-left: 10%;
+  margin-top: 0%;
+  margin-left: 0%;
   padding-right: 0px;
   padding-left: 0px;
   font-size: 12px;
@@ -843,9 +884,9 @@ blockquote {
 }
 
 .heading {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 10%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0%;
   padding-left: 0px;
   text-align: left;
 }
@@ -862,8 +903,8 @@ blockquote {
 }
 
 .heading-2 {
-  margin-top: 0px;
-  margin-left: 10%;
+  margin-top: 20px;
+  margin-left: 0%;
   padding-left: 0px;
 }
 
@@ -895,7 +936,7 @@ blockquote {
 }
 
 .portfolio-paragraph {
-  margin: 0px 10% 30%;
+  margin: 0px 0% 0%;
   padding-right: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
@@ -918,8 +959,9 @@ blockquote {
 }
 
 .text-block-4 {
-  margin-bottom: 10%;
-  margin-left: 10%;
+  margin-top: auto;
+  margin-bottom: 0%;
+  margin-left: 0%;
   padding-left: 0px;
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
@@ -957,9 +999,14 @@ blockquote {
   height: auto;
   margin-top: 40px;
   margin-bottom: 40px;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
 }
 
 .blog-hero-section {
@@ -977,14 +1024,188 @@ blockquote {
 }
 
 .div-blocks-blog {
-  width: 20%;
-  height: 200px;
-  background-color: #b48787;
+  width: auto;
+  height: 80vh;
+  margin-right: 0px;
+  margin-left: 0px;
+  background-color: transparent;
 }
 
 .div-blocks-overlay {
   width: 100%;
   height: 100%;
+}
+
+.aboutmertb {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.aboutmertb h2 {
+  margin-bottom: 30px;
+  opacity: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.div-block-3 {
+  width: 20%;
+  height: 200px;
+}
+
+.div-block-4 {
+  width: auto;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.heading-4 {
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 15px;
+  text-align: left;
+}
+
+.div-block-5 {
+  width: 30%;
+  height: 1px;
+  border-top: 3px solid #000;
+}
+
+.text-block-5 {
+  margin-bottom: 20px;
+}
+
+.heading-5 {
+  color: #000;
+  text-align: center;
+}
+
+.blogsubheader {
+  color: #000;
+  font-size: 15px;
+  text-align: left;
+}
+
+.image-5 {
+  height: 160px;
+}
+
+.image-6 {
+  height: 160px;
+}
+
+.image-7 {
+  height: 160px;
+}
+
+.selected-project-details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0px;
+  padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  background-color: #c92228;
+}
+
+.selected-project-image {
+  width: 100%;
+  height: 100%;
+}
+
+.selected-project-image-effect {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  -webkit-filter: blur(40px) saturate(200%);
+  filter: blur(40px) saturate(200%);
+  -webkit-transform: translate(0px, 20px);
+  -ms-transform: translate(0px, 20px);
+  transform: translate(0px, 20px);
+}
+
+.paragraph-4 {
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  font-size: 12px;
+}
+
+.heading-6 {
+  margin-left: 0px;
+  font-size: 18px;
+}
+
+.text-block-6 {
+  margin-top: 20px;
+  margin-left: 0px;
+  font-size: 12px;
+}
+
+.text-block-7 {
+  margin-top: auto;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+
+.project-details {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #c92228;
+}
+
+.project-details.pd2 {
+  background-color: #297cbb;
+}
+
+.project-details.pd1bg {
+  background-color: #08064f;
+}
+
+.paragraph-5 {
+  font-size: 12px;
+}
+
+.text-block-8 {
+  font-size: 12px;
+}
+
+.heading-7 {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.text-block-9 {
+  margin-top: auto;
+}
+
+.div-block-6 {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: 1px solid #000;
 }
 
 @media screen and (max-width: 991px) {
